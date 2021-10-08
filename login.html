@@ -49,16 +49,17 @@
         </div>
     </nav>
     <main class="mountain-bg">
-        <h1 class="page-title">Login</h1>
-        <form class="login" action="post">
-            <label class="email-label">Email</label>
-            <input type="email" name="email" autocomplete="given-name">
-
-            <label class="password-label">Password</label>
-            <input type="password" name="password" autocomplete="given-name">
-            <div>
-                <input type="submit" value="login">
+        <h1 class="page-title black-transparent-bg container">Login</h1>
+        <form class="submission-form" method="">
+            <div class="expandable-input">
+                <label>Email</label>
+                <input class="register-input" type="email" name="email" autocomplete="email">
             </div>
+            <div class="expandable-input">
+                <label>Password</label>
+                <input class="register-input" type="password" name="password" autocomplete="new-password">
+            </div>
+            <input type="submit" value="Login">
         </form>
     </main>
 </body>
