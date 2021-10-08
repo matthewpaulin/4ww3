@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>Rock Review</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/fav2 cropped.png" />
+</head>
+
+<body>
+    <nav role="navigation" aria-label="main navigation">
+        <div class="nav-content">
+            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <input type="checkbox" id="nav-check">
+            <div id="hamburger">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <ul class="nav-links">
+
+                <li class="nav-link active">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nav-link not-active">
+                    <a href="./sampleResult.html">Sample Result</a>
+                </li>
+                <li class="nav-link not-active">
+                    <a href="/sampleObject.html">Sample Gym</a>
+                </li>
+                <li class="nav-link not-active">
+                    <a href="./sampleSubmission.html">Add a Gym</a>
+                </li>
+                <ul class="nav-buttons">
+                    <li class="nav-button">
+                        <a href="/signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-button">
+                        <a href="/login.html">Log In</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="search">
+            <input type="text" placeholder="Search" name="search">
+            <!-- <button class="search-button">
+                <i class="search-icon fas fa-filter fa-3x"></i>
+                <i class="search-icon fas fa-filter fa-2x"></i>
+            </button> -->
+            <button class="search-button">
+                <i class="search-icon fas fa-search fa-3x"></i>
+                <i class="search-icon fas fa-search fa-2x"></i>
+            </button>
+            <div class="dropdown">
+                <select name="rating">
+                    <option value="1 Star">1 Star</option>
+                    <option value="2 Star">2 Star</option>
+                    <option value="3 Star">3 Star</option>
+                    <option value="4 Star">4 Star</option>
+                    <option value="5 Star">5 Star</option>
+                </select>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
