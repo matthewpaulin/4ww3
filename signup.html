@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>Rock Review</title>
+    <link rel="icon" type="image/png" href="assets/images/fav2.png" />
+</head>
+
+<body>
+    <nav role="navigation" aria-label="main navigation">
+        <div class="nav-content">
+            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <input type="checkbox" id="nav-check">
+            <div id="hamburger">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <ul class="nav-links">
+
+                <li class="nav-link active">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nav-link not-active">
+                    <a href="./sampleResult.html">Sample Result</a>
+                </li>
+                <li class="nav-link not-active">
+                    <a href="/sampleObject.html">Sample Gym</a>
+                </li>
+                <li class="nav-link not-active">
+                    <a href="./sampleSubmission.html">Add a Gym</a>
+                </li>
+                <ul class="nav-buttons">
+                    <li class="nav-button">
+                        <a href="/signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-button">
+                        <a href="/login.html">Log In</a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <main class="mountain-bg">
+        <h1 class="page-title">Register for an Account</h1>
+        <!-- Form which will send a POST request to the current URL (empty for now) -->
+        <form class="registration-form" method="">
+            <div class="expandable-input">
+                <label>First Name</label>
+                <input class="register-input" type="text" name="first-name" autocomplete="given-name">
+            </div>
+
+            <div class="expandable-input">
+                <label>Last Name</label>
+                <input class="register-input" type="text" name="last-name" autocomplete="family-name">
+            </div>
+
+            <div class="expandable-input">
+                <label>Email</label>
+                <input class="register-input" type="email" name="email" autocomplete="email">
+            </div>
+
+            <div class="expandable-input">
+                <label>Password</label>
+                <input class="register-input" type="password" name="password" autocomplete="new-password">
+            </div>
+
+            <div class="expandable-input">
+                <label>Confirm Password</label>
+                <input class="register-input" type="password" name="confirm-password" autocomplete="new-password">
+            </div>
+
+            <div>
+                <label>Birthdate</label>
+                <input class="date-input" type="date" name="birthdate" autocomplete="bday">
+            </div>
+
+            <div>
+                <label class="block-label">Gender</label>
+
+                <input type="radio" name="gender" value="Male">
+                <label class="radio-label" for="male">Male</label>
+                <input type="radio" name="gender" value="Female">
+                <label class="radio-label" for="female">Female</label>
+                <input type="radio" name="gender" value="Other">
+                <label class="radio-label" for="other">Other</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="email-consent">
+                I agree to the <a class="form-link" href="/terms.html">terms and conditions</a>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </main>
+</body>
+
+</html>

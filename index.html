@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" type="image/png" href="assets/images/fav2.png" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <title>Rock Review</title>
-    <link rel="shortcut icon" type="image/jpg" href="assets/images/fav2 cropped.png" />
 </head>
 
 <body>
@@ -48,24 +48,33 @@
             </ul>
         </div>
     </nav>
-    <main>
+    <main class="mountain-bg">
+        <p class="welcome container">
+            Welcome to Rock Review where our goal is to provide an easy way to pick your next climbing destination.
+            Search
+            by location or by ratings and we will provide climbing gyms that match your criteria.
+        </p>
         <div class="search">
-            <input type="text" placeholder="Search" name="search">
-            <!-- <button class="search-button">
-                <i class="search-icon fas fa-filter fa-3x"></i>
-                <i class="search-icon fas fa-filter fa-2x"></i>
-            </button> -->
-            <button class="search-button">
-                <i class="search-icon fas fa-search fa-3x"></i>
-                <i class="search-icon fas fa-search fa-2x"></i>
-            </button>
-            <div class="dropdown">
+            <div class="searchbar">
+                <input type="text" placeholder="Search" name="search">
+                <!-- <button class="search-button">
+                    <i class="search-icon fas fa-filter fa-3x"></i>
+                    <i class="search-icon fas fa-filter fa-2x"></i>
+                </button> -->
+                <button class="search-button">
+                    <i class="search-icon fas fa-search fa-3x"></i>
+                    <i class="search-icon fas fa-search fa-2x"></i>
+                </button>
+            </div>
+
+
+            <div class="select-dropdown">
                 <select name="rating">
-                    <option value="1 Star">1 Star</option>
-                    <option value="2 Star">2 Star</option>
-                    <option value="3 Star">3 Star</option>
-                    <option value="4 Star">4 Star</option>
-                    <option value="5 Star">5 Star</option>
+                    <option value="1 Star" name="one_star" class="select-dropdown-option">1 Star</option>
+                    <option value="2 Star" name="two_star" class="select-dropdown-option">2 Star</option>
+                    <option value="3 Star" name="three_star" class="select-dropdown-option">3 Star</option>
+                    <option value="4 Star" name="four_star" class="select-dropdown-option">4 Star</option>
+                    <option value="5 Star" name="five_star" class="select-dropdown-option">5 Star</option>
                 </select>
             </div>
         </div>
