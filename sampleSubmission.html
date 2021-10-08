@@ -49,31 +49,34 @@
         </div>
     </nav>
     <main class="mountain-bg">
-        <h1 class="page-title">Add New Gym</h1>
-        <div>
-            <p>Name of the gym</p>
-            <input type="text" name="gym-name">
-        </div>
-        <div>
-            <p> Description of the gym</p>
-            <textarea name="gym-description">
-            </textarea>
-        </div>
-        <ul class="lat-long">
-            <li>
-                <p>Lattitude</p>
-                <input type="text" name="lattitude">
-            </li>
-            <li>
-                <p>Longitude</p>
-                <input type="text" name="longitude">
-            </li>
-        </ul>
-        <div class="add-image">
-            <img class="add-image-image" src="assets/images/addimage.png">
-        </div>
-        <input type="submit" value="Add">
+        <h1 class="page-title black-transparent-bg container">Add New Gym</h1>
+        <form class="submission-form" method="">
+            <div class="expandable-input">
+                <label>Name of Gym</label>
+                <input class="register-input" type="text" name="gym-name" autocomplete="given-gym">
+            </div>
 
+            <div class="expandable-input gym-description">
+                <label>Description of Gym</label>
+                <textarea class="gym-description" name="gym-description">
+                </textarea>
+            </div>
+
+            <div class="expandable-input">
+                <label>Lattitude</label>
+                <input class="register-input" type="text" name="lattitude" autocomplete="">
+            </div>
+
+            <div class="expandable-input">
+                <label>Longitutde</label>
+                <input class="register-input" type="text" name="longitude" autocomplete="">
+            </div>
+
+            <div class="add-image">
+                <img class="add-image-image" src="assets/images/addimage.png">
+            </div>
+            <input type="submit" value="Add">
+        </form>
     </main>
 </body>
 
