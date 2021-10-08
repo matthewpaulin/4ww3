@@ -269,7 +269,8 @@ main.mountain-bg {
     font-size: 2.5rem;
     text-align: center;
     padding: 1rem 0 1.5rem 0;
-    color: var(--text-color-primary);
+    /* color: var(--text-color-primary); */
+    color: white;
 }
 
 /* Search Page */
@@ -384,7 +385,7 @@ select:focus {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.title-with-bg{
+.black-transparent-bg{
     color: white;
     max-width: 500px;
     margin-top: 2rem;
@@ -468,11 +469,34 @@ select:focus {
 }
 
 .review {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
+
+.review-container {
+    padding: 0 var(--container-padding);
+    max-width: min(100vw, 1200px);
+    min-width: 280px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: var(--alt-clr);
+    max-width: 600px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+/* text-align: center;
+display: flex;
+flex-direction: column;
+margin: auto;
+padding: 1rem 0;
+gap: 0.75rem;
+align-items: center;
+max-width: 600px;
+background-color: var(--alt-clr);
+color: white;
+border-radius: 1em; */
 
 /* Sample Submission Page */
 
