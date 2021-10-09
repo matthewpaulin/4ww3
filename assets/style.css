@@ -1,4 +1,8 @@
+/* ‾‾‾‾‾‾‾‾‾ */
+
 /* Variables */
+
+/* _________ */
 
 :root {
     --main-bg-clr: #01161E;
@@ -9,7 +13,11 @@
     --container-padding: 0.5rem;
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾‾ */
+
 /* Reset styles */
+
+/* ____________ */
 
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -64,7 +72,13 @@ td, th {
     padding: 0
 }
 
+/* ‾‾‾‾‾‾ */
+
 /* Navbar */
+
+/* ______ */
+
+/* navbar bottom border */
 
 nav {
     height: 5.2em;
@@ -73,6 +87,8 @@ nav {
     position: fixed;
     z-index: 10;
 }
+
+/* navbar content*/
 
 .nav-content {
     padding: 0 2rem;
@@ -108,6 +124,8 @@ nav {
     cursor: pointer;
 }
 
+/* link underline */
+
 .nav-link.active::after {
     content: "";
     position: absolute;
@@ -140,6 +158,8 @@ nav {
     transform: translate3d(0, 0.1rem, 0);
     transform: translate3d(0, 0, 0);
 }
+
+/* auth btns */
 
 .nav-link a {
     display: block;
@@ -180,6 +200,12 @@ nav {
     display: none;
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* burger menu */
+
+/* ___________ */
+
 @media (max-width:58rem) {
     #hamburger {
         display: block;
@@ -199,6 +225,7 @@ nav {
         height: .75rem;
         border-top: 2px solid #eee;
     }
+    /* page link container */
     .nav-links {
         position: absolute;
         display: block;
@@ -210,6 +237,7 @@ nav {
         left: 0px;
         z-index: 1000;
     }
+    /* auth btns */
     .nav-buttons {
         border-bottom: solid .2rem white;
         border-radius: 0 0 1rem 1rem;
@@ -221,6 +249,7 @@ nav {
         display: inline-block;
         background-color: rgba(1, 22, 30, 0.6);
     }
+    /* page link */
     .nav-link {
         transition: all 0.1s ease-in;
         text-align: center;
@@ -242,6 +271,7 @@ nav {
     .nav-link.not-active:hover {
         background-color: var(--main-bg-clr);
     }
+    /* menu height based on checkbox */
     #nav-check:not(:checked)~.nav-links {
         height: 0px;
     }
@@ -250,15 +280,20 @@ nav {
     }
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
 /* General page styles */
+
+/* ___________________ */
 
 body {
     background-color: darkgray;
 }
 
-/* [1]J. Bishop, 2017. https://unsplash.com/photos/dR_q93lfaTw */
+/* full page bg */
 
 main.mountain-bg {
+    /* [1]J. Bishop, 2017. https://unsplash.com/photos/dR_q93lfaTw */
     background-image: url(images/bg.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -285,7 +320,11 @@ main.mountain-bg {
     color: white;
 }
 
+/* ‾‾‾‾‾‾ */
+
 /* Footer */
+
+/* ______ */
 
 footer {
     width: 100%;
@@ -301,7 +340,11 @@ footer a {
     color: var(--alt-clr-two);
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾ */
+
 /* Search Page */
+
+/* ___________ */
 
 .welcome {
     text-align: center;
@@ -367,6 +410,8 @@ footer a {
     color: #fafafa;
 }
 
+/* responsive search bar and filter */
+
 .search-icon.fa-2x {
     display: none;
 }
@@ -400,7 +445,11 @@ select:focus {
     color: #fafafa;
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
 /* Sample results page */
+
+/* ___________________ */
 
 .sample-results {
     color: white;
@@ -413,7 +462,9 @@ select:focus {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.black-transparent-bg {
+/* semi-transparent blue container */
+
+.primary-transparent-bg {
     color: white;
     max-width: 500px;
     margin-top: 2rem;
@@ -450,7 +501,11 @@ select:focus {
     align-self: center;
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
 /* Sample object */
+
+/* _____________ */
 
 .object-rating, .object-image {
     text-align: center;
@@ -500,29 +555,11 @@ select:focus {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
 /* Sample Submission Page */
 
-.lat-long {
-    padding: 0.5rem;
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(calc(280px - 2*var(--container-padding)), 1fr));
-    gap: 2rem;
-}
-
-.add-image {
-    background-color: var(--main-bg-clr);
-    width: 200px;
-    height: 200px;
-    border: 2px solid #598392;
-    padding: 50px;
-    justify-content: center;
-    text-align: center;
-}
-
-.image-icon {
-    margin: 20px;
-    color: green;
-}
+/* ______________________ */
 
 .submission-form {
     text-align: center;
@@ -540,10 +577,18 @@ select:focus {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* Form styles */
+
+/* ___________ */
+
 .block-input:focus, textarea:focus, .date-input:focus {
     outline: solid 0.2em white;
     outline-offset: 0.1em;
 }
+
+/* 3D submit btn */
 
 input[type="submit"] {
     color: var(--main-bg-clr);
@@ -601,6 +646,8 @@ input[type="submit"]:active {
     align-items: center;
 }
 
+/* constrain textarea */
+
 .gym-description textarea {
     display: block;
     padding: 0 0.2rem;
@@ -638,7 +685,11 @@ input[type="file"] {
     font-weight: bold;
 }
 
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾*/
+
 /* Terms and Conditions page */
+
+/* _________________________ */
 
 .terms {
     padding-top: 5.2rem;
@@ -648,7 +699,11 @@ input[type="file"] {
     font-weight: 400;
 }
 
-/* Mobile styles */
+/* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
+
+/* Mobile styles for search page */
+
+/* _____________________________ */
 
 @media only screen and (max-width: 600px) {
     .search {
