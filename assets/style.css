@@ -482,6 +482,13 @@ select:focus {
     text-align: center;
 }
 
+.result-title-contaier {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .result-name {
     font-size: 2em;
     font-weight: 500;
