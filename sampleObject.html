@@ -12,9 +12,12 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav role="navigation" aria-label="main navigation">
         <div class="nav-content">
-            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+
+            <!-- Hamburger icon -->
             <input type="checkbox" id="nav-check">
             <div id="hamburger">
                 <label for="nav-check">
@@ -23,28 +26,27 @@
                     <span></span>
                 </label>
             </div>
-            <ul class="nav-links">
 
-                <li class="nav-link active">
+            <!-- navbar links -->
+            <ul class="nav-links">
+                <li class="nav-link not-active">
                     <a href="./index.html">Home</a>
                 </li>
                 <li class="nav-link not-active">
                     <a href="./sampleResult.html">Sample Result</a>
                 </li>
-                <li class="nav-link not-active">
+                <li class="nav-link active">
                     <a href="/sampleObject.html">Sample Gym</a>
                 </li>
                 <li class="nav-link not-active">
                     <a href="./sampleSubmission.html">Add a Gym</a>
                 </li>
-                <ul class="nav-buttons">
-                    <li class="nav-button">
-                        <a href="/signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-button">
-                        <a href="/login.html">Log In</a>
-                    </li>
-                </ul>
+
+                <!-- auth buttons -->
+                <li class="nav-buttons">
+                    <a class="nav-button" href="/signup.html">Sign up</a>
+                    <a class="nav-button" href="/login.html">Sign in</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -83,7 +85,7 @@
         </div>
         <div>
             <ul class="sample-reviews">
-                <li class="review review-container">
+                <li class="review">
                     <div class="person">
                         <i class="fas fa-user-circle fa-3x"></i>
                         <p>Michael Kipper</p>
@@ -100,7 +102,7 @@
                         Very kid friendly.</p>
                 </li>
 
-                <li class="review review-container">
+                <li class="review">
                     <div class="person">
                         <i class="fas fa-user-circle fa-3x"></i>
                         <p>Jessica Cheung</p>
@@ -118,7 +120,7 @@
                         climbing. Family friendly atmosphere with a lounge area to just kick it. Highly recommend!!!</p>
                 </li>
 
-                <li class="review review-container">
+                <li class="review">
                     <div class="person">
                         <i class="fas fa-user-circle fa-3x"></i>
                         <p>Noah David</p>
@@ -139,6 +141,13 @@
             </ul>
         </div>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/matthewpaulin/4ww3" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </footer>
 </body>
 
 </html>

@@ -12,9 +12,12 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav role="navigation" aria-label="main navigation">
         <div class="nav-content">
-            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+
+            <!-- Hamburger icon -->
             <input type="checkbox" id="nav-check">
             <div id="hamburger">
                 <label for="nav-check">
@@ -23,9 +26,10 @@
                     <span></span>
                 </label>
             </div>
-            <ul class="nav-links">
 
-                <li class="nav-link active">
+            <!-- navbar links -->
+            <ul class="nav-links">
+                <li class="nav-link not-active">
                     <a href="./index.html">Home</a>
                 </li>
                 <li class="nav-link not-active">
@@ -37,53 +41,51 @@
                 <li class="nav-link not-active">
                     <a href="./sampleSubmission.html">Add a Gym</a>
                 </li>
-                <ul class="nav-buttons">
-                    <li class="nav-button">
-                        <a href="/signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-button">
-                        <a href="/login.html">Log In</a>
-                    </li>
-                </ul>
+
+                <!-- auth buttons -->
+                <li class="nav-buttons">
+                    <a class="nav-button" href="/signup.html">Sign up</a>
+                    <a class="nav-button" href="/login.html">Sign in</a>
+                </li>
             </ul>
         </div>
     </nav>
     <main class="mountain-bg">
         <h1 class="page-title black-transparent-bg container">Register for an Account</h1>
-        <!-- Form which will send a POST request to the current URL (empty for now) -->
-        <form class="registration-form" method="">
-            <div class="expandable-input">
+        <!-- Form which will send a POST request to sign up (empty for now) -->
+        <form class="submission-form" method="">
+            <div class="form-input">
                 <label>First Name</label>
-                <input class="register-input" type="text" name="first-name" autocomplete="given-name">
+                <input class="block-input" type="text" name="first-name" autocomplete="given-name">
             </div>
 
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Last Name</label>
-                <input class="register-input" type="text" name="last-name" autocomplete="family-name">
+                <input class="block-input" type="text" name="last-name" autocomplete="family-name">
             </div>
 
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Email</label>
-                <input class="register-input" type="email" name="email" autocomplete="email">
+                <input class="block-input" type="email" name="email" autocomplete="email">
             </div>
 
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Password</label>
-                <input class="register-input" type="password" name="password" autocomplete="new-password">
+                <input class="block-input" type="password" name="password" autocomplete="new-password">
             </div>
 
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Confirm Password</label>
-                <input class="register-input" type="password" name="confirm-password" autocomplete="new-password">
+                <input class="block-input" type="password" name="confirm-password" autocomplete="new-password">
             </div>
 
             <div>
-                <label>Birthdate</label>
-                <input class="date-input" type="date" name="birthdate" autocomplete="bday">
+                <Birthdate class="block-label mb-05">Birthdate</label>
+                    <input class="date-input" type="date" name="birthdate" autocomplete="bday">
             </div>
 
             <div>
-                <label class="block-label">Gender</label>
+                <label class="block-label mb-05">Gender</label>
 
                 <input type="radio" name="gender" value="Male">
                 <label class="radio-label" for="male">Male</label>
@@ -100,6 +102,12 @@
             <input type="submit" value="Register">
         </form>
     </main>
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/matthewpaulin/4ww3" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </footer>
 </body>
 
 </html>

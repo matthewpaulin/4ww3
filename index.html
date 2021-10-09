@@ -12,9 +12,12 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav role="navigation" aria-label="main navigation">
         <div class="nav-content">
-            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+
+            <!-- Hamburger icon -->
             <input type="checkbox" id="nav-check">
             <div id="hamburger">
                 <label for="nav-check">
@@ -23,8 +26,9 @@
                     <span></span>
                 </label>
             </div>
-            <ul class="nav-links">
 
+            <!-- navbar links -->
+            <ul class="nav-links">
                 <li class="nav-link active">
                     <a href="./index.html">Home</a>
                 </li>
@@ -37,39 +41,36 @@
                 <li class="nav-link not-active">
                     <a href="./sampleSubmission.html">Add a Gym</a>
                 </li>
-                <ul class="nav-buttons">
-                    <li class="nav-button">
-                        <a href="/signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-button">
-                        <a href="/login.html">Log In</a>
-                    </li>
-                </ul>
+
+                <!-- auth buttons -->
+                <li class="nav-buttons">
+                    <a class="nav-button" href="/signup.html">Sign up</a>
+                    <a class="nav-button" href="/login.html">Sign in</a>
+                </li>
             </ul>
         </div>
     </nav>
     <main class="mountain-bg">
+        <!-- Intro blurb -->
         <p class="welcome container">
             Welcome to Rock Review where our goal is to provide an easy way to pick your next climbing destination.
             Search
             by location or by ratings and we will provide climbing gyms that match your criteria.
         </p>
-        <div class="search">
+
+        <!-- Search form -->
+        <form class="search" method="get" id="searchform">
+            <!-- Search bar and search icon -->
             <div class="searchbar">
-                <input type="text" placeholder="Search" name="search">
-                <!-- <button class="search-button">
-                    <i class="search-icon fas fa-filter fa-3x"></i>
-                    <i class="search-icon fas fa-filter fa-2x"></i>
-                </button> -->
-                <button class="search-button">
+                <input type="search" placeholder="Search" name="search" autofocus>
+                <button type="submit" value="submit" class="search-button">
                     <i class="search-icon fas fa-search fa-3x"></i>
                     <i class="search-icon fas fa-search fa-2x"></i>
                 </button>
             </div>
-
-
+            <!-- Rating filter -->
             <div class="select-dropdown">
-                <select name="rating">
+                <select name="rating" form="searchform">
                     <option value="1 Star" name="one_star" class="select-dropdown-option">1 Star</option>
                     <option value="2 Star" name="two_star" class="select-dropdown-option">2 Star</option>
                     <option value="3 Star" name="three_star" class="select-dropdown-option">3 Star</option>
@@ -77,8 +78,15 @@
                     <option value="5 Star" name="five_star" class="select-dropdown-option">5 Star</option>
                 </select>
             </div>
-        </div>
+        </form>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/matthewpaulin/4ww3" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </footer>
 </body>
 
 </html>

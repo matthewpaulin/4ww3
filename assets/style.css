@@ -69,7 +69,9 @@ td, th {
 nav {
     height: 5.2em;
     background: var(--nav-gradient);
-    width: 100vw;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
 }
 
 .nav-content {
@@ -139,6 +141,12 @@ nav {
     transform: translate3d(0, 0, 0);
 }
 
+.nav-link a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .nav-buttons {
     display: flex;
     justify-content: center;
@@ -172,7 +180,7 @@ nav {
     display: none;
 }
 
-@media (max-width:900px) {
+@media (max-width:58rem) {
     #hamburger {
         display: block;
     }
@@ -203,6 +211,8 @@ nav {
         z-index: 1000;
     }
     .nav-buttons {
+        border-bottom: solid .2rem white;
+        border-radius: 0 0 1rem 1rem;
         background-color: var(--alt-clr);
         padding: .5rem 0;
         margin: 0 auto;
@@ -215,8 +225,14 @@ nav {
         transition: all 0.1s ease-in;
         text-align: center;
         font-size: 1.5rem;
-        padding: 1rem 2rem;
         background-color: var(--alt-clr);
+        height: 3.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-link a {
+        line-height: 3.25rem;
     }
     .nav-link.active {
         background-color: white;
@@ -243,18 +259,15 @@ body {
 /* [1]J. Bishop, 2017. https://unsplash.com/photos/dR_q93lfaTw */
 
 main.mountain-bg {
-    margin-top: 5.2rem;
     background-image: url(images/bg.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    min-height: calc(100vh - 5.2rem);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    padding: 6.7rem 0;
 }
 
 .container {
@@ -269,8 +282,23 @@ main.mountain-bg {
     font-size: 2.5rem;
     text-align: center;
     padding: 1rem 0 1.5rem 0;
-    /* color: var(--text-color-primary); */
     color: white;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--main-bg-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+footer a {
+    color: var(--alt-clr-two);
 }
 
 /* Search Page */
@@ -279,7 +307,7 @@ main.mountain-bg {
     text-align: center;
     max-width: 500px;
     color: white;
-    margin: 1rem auto 0 auto;
+    margin: 0 auto;
     border-radius: 1rem;
     font-weight: 400;
     background-color: rgba(1, 22, 30, 0.6);
@@ -385,7 +413,7 @@ select:focus {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.black-transparent-bg{
+.black-transparent-bg {
     color: white;
     max-width: 500px;
     margin-top: 2rem;
@@ -395,18 +423,6 @@ select:focus {
     background-color: rgba(1, 22, 30, 0.6);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-/* 
-.welcome {
-    text-align: center;
-    max-width: 500px;
-    color: white;
-    margin: 1rem auto 0 auto;
-    border-radius: 1rem;
-    font-weight: 400;
-    background-color: rgba(1, 22, 30, 0.6);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    padding: 2rem;
-} */
 
 .result-info {
     display: flex;
@@ -474,10 +490,7 @@ select:focus {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-}
-
-.review-container {
-    padding: 0 var(--container-padding);
+    padding: 1rem;
     max-width: min(100vw, 1200px);
     min-width: 280px;
     margin: 0 auto;
@@ -520,70 +533,105 @@ select:focus {
     gap: 0.75rem;
     align-items: center;
     max-width: 600px;
+    min-width: 250px;
     background-color: var(--alt-clr);
     color: white;
     border-radius: 1em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* Register page */
-
-.registration-form {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 1rem 0;
-    gap: 0.75rem;
-    align-items: center;
-    max-width: 600px;
-    background-color: var(--alt-clr);
-    color: white;
-    border-radius: 1em;
+.block-input:focus, textarea:focus, .date-input:focus {
+    outline: solid 0.2em white;
+    outline-offset: 0.1em;
 }
 
-.register-input {
+input[type="submit"] {
+    color: var(--main-bg-clr);
+    background-color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: solid 0.2rem var(--main-bg-clr);
+    border-radius: 2rem;
+    box-shadow: -3px 3px var(--main-bg-clr), -2px 2px var(--main-bg-clr), -1px 1px var(--main-bg-clr);
+}
+
+input[type="submit"]:hover {
+    transform: translate(-1px, 1px);
+    box-shadow: -2px 2px var(--main-bg-clr), -1px 1px var(--main-bg-clr);
+}
+
+input[type="submit"]:active {
+    transform: translate(-2px, 2px);
+    box-shadow: var(--main-bg-clr)
+}
+
+.mb-05 {
+    margin-bottom: 0.5em;
+}
+
+.block-input {
     display: block;
-    margin-top: 0.5rem;
 }
 
 .block-label {
     display: block;
-    margin-bottom: 0.5rem;
 }
 
-.expandable-input {
+.form-input {
     width: 75%;
-    margin: auto;
+    min-width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
 }
 
-.expandable-input>input {
+.form-input>input {
     transition: all 0.3s ease;
     border: solid 0.2rem var(--main-bg-clr);
-    width: 70%;
+    width: 100%;
     margin: auto;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
 }
 
-.gym-description{
-    min-width: 20rem;
-    min-height: 6rem;
+.gym-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.registration-form input:focus {
+.gym-description textarea {
+    display: block;
+    padding: 0 0.2rem;
     width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 3em;
+    max-height: 20em;
+    height: 5em;
+    border-radius: .5rem;
+    border: solid 0.2rem var(--main-bg-clr);
 }
 
-/* input[type="radio"] {
-    margin-left: 1rem;
-} */
+.file-uploads {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
 
-/* input[type="date"] .date-input {
+input[type="file"] {
+    display: none;
+}
+
+.date-input {
+    display: block;
     border: solid 0.2rem var(--main-bg-clr);
     margin: auto;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
-} */
+}
 
 .form-link {
     text-decoration: underline;
@@ -593,7 +641,8 @@ select:focus {
 /* Terms and Conditions page */
 
 .terms {
-    padding-top: 2rem;
+    padding-top: 5.2rem;
+    padding-bottom: 1rem;
     background-color: var(--alt-clr);
     color: black;
     font-weight: 400;

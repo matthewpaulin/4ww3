@@ -12,9 +12,12 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav role="navigation" aria-label="main navigation">
         <div class="nav-content">
-            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+
+            <!-- Hamburger icon -->
             <input type="checkbox" id="nav-check">
             <div id="hamburger">
                 <label for="nav-check">
@@ -23,12 +26,13 @@
                     <span></span>
                 </label>
             </div>
-            <ul class="nav-links">
 
-                <li class="nav-link active">
+            <!-- navbar links -->
+            <ul class="nav-links">
+                <li class="nav-link not-active">
                     <a href="./index.html">Home</a>
                 </li>
-                <li class="nav-link not-active">
+                <li class="nav-link active">
                     <a href="./sampleResult.html">Sample Result</a>
                 </li>
                 <li class="nav-link not-active">
@@ -37,21 +41,19 @@
                 <li class="nav-link not-active">
                     <a href="./sampleSubmission.html">Add a Gym</a>
                 </li>
-                <ul class="nav-buttons">
-                    <li class="nav-button">
-                        <a href="/signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-button">
-                        <a href="/login.html">Log In</a>
-                    </li>
-                </ul>
+
+                <!-- auth buttons -->
+                <li class="nav-buttons">
+                    <a class="nav-button" href="/signup.html">Sign up</a>
+                    <a class="nav-button" href="/login.html">Sign in</a>
+                </li>
             </ul>
         </div>
     </nav>
     <main class="mountain-bg">
         <h1 class="page-title black-transparent-bg container"> Results </h1>
         <div class="result-location">
-            <img class="sample-map" src="/assets/images/sample_map.png">
+            <img class="sample-map" src="/assets/images/sample_map.png" alt="sample map">
         </div>
         <ul class="sample-results container">
             <li class="result-info">
@@ -80,7 +82,7 @@
                     the climbing and fitness industry to get your business geared for success.
                 </p>
                 <div class="result-image">
-                    <img src="/assets/images/impact.jpeg" alt="Result Image">
+                    <img src="/assets/images/impact.jpeg" alt="Result Image" alt="Impact climbing gym">
                 </div>
                 </div>
             </li>
@@ -88,7 +90,7 @@
             <li class="result-info">
                 <h2 class="result-name">
                     <a href="https://www.truenorthclimbing.com">
-                        True North Clibimng
+                        True North Climbing
                     </a>
                 </h2>
                 <div class="result-review">
@@ -119,6 +121,13 @@
             </li>
         </ul>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/matthewpaulin/4ww3" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </footer>
 </body>
 
 </html>

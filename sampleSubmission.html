@@ -12,9 +12,12 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav role="navigation" aria-label="main navigation">
         <div class="nav-content">
-            <img class="nav-logo" src="/assets/images/logo-light.png">
+            <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+
+            <!-- Hamburger icon -->
             <input type="checkbox" id="nav-check">
             <div id="hamburger">
                 <label for="nav-check">
@@ -23,9 +26,10 @@
                     <span></span>
                 </label>
             </div>
-            <ul class="nav-links">
 
-                <li class="nav-link active">
+            <!-- navbar links -->
+            <ul class="nav-links">
+                <li class="nav-link not-active">
                     <a href="./index.html">Home</a>
                 </li>
                 <li class="nav-link not-active">
@@ -34,50 +38,63 @@
                 <li class="nav-link not-active">
                     <a href="/sampleObject.html">Sample Gym</a>
                 </li>
-                <li class="nav-link not-active">
+                <li class="nav-link active">
                     <a href="./sampleSubmission.html">Add a Gym</a>
                 </li>
-                <ul class="nav-buttons">
-                    <li class="nav-button">
-                        <a href="/signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-button">
-                        <a href="/login.html">Log In</a>
-                    </li>
-                </ul>
+
+                <!-- auth buttons -->
+                <li class="nav-buttons">
+                    <a class="nav-button" href="/signup.html">Sign up</a>
+                    <a class="nav-button" href="/login.html">Sign in</a>
+                </li>
             </ul>
         </div>
     </nav>
     <main class="mountain-bg">
         <h1 class="page-title black-transparent-bg container">Add New Gym</h1>
+        <!-- Form which will send a POST request (empty for now) -->
         <form class="submission-form" method="">
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Name of Gym</label>
-                <input class="register-input" type="text" name="gym-name" autocomplete="given-gym">
+                <input class="block-input" type="text" name="gym-name" autocomplete="given-gym">
             </div>
 
-            <div class="expandable-input gym-description">
+            <div class="form-input gym-description">
                 <label>Description of Gym</label>
-                <textarea class="gym-description" name="gym-description">
-                </textarea>
+                <textarea name="gym-description" wrap="physical"></textarea>
             </div>
 
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Lattitude</label>
-                <input class="register-input" type="text" name="lattitude" autocomplete="">
+                <input class="block-input" type="number" name="lattitude" autocomplete="">
             </div>
 
-            <div class="expandable-input">
+            <div class="form-input">
                 <label>Longitutde</label>
-                <input class="register-input" type="text" name="longitude" autocomplete="">
+                <input class="block-input" type="number" name="longitude" autocomplete="">
             </div>
 
-            <div class="add-image">
-                <img class="add-image-image" src="assets/images/addimage.png">
+            <div class="file-uploads">
+                <label for="image-upload" class="content-upload-label">
+                    <i class="fas fa-file-image fa-4x"></i>
+                </label>
+                <input id="image-upload" type="file" name="image">
+
+                <!-- <label for="video-upload" class="content-upload-label">
+                    <i class="fas fa-file-video fa-4x"></i>
+                </label>
+                <input id="video-upload" type="file" name="video"> -->
             </div>
-            <input type="submit" value="Add">
+            <input type="submit" value="Add Gym">
         </form>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://github.com/matthewpaulin/4ww3" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </footer>
 </body>
 
 </html>
