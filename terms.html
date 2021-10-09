@@ -13,9 +13,11 @@
 
 <body>
     <!-- Navbar -->
-    <nav role="navigation" aria-label="main navigation">
+    <nav aria-label="main navigation">
         <div class="nav-content">
             <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+
+            <!-- Hamburger icon -->
             <input type="checkbox" id="nav-check">
             <div id="hamburger">
                 <label for="nav-check">
@@ -24,9 +26,10 @@
                     <span></span>
                 </label>
             </div>
-            <ul class="nav-links">
 
-                <li class="nav-link active">
+            <!-- navbar links -->
+            <ul class="nav-links">
+                <li class="nav-link not-active">
                     <a href="./index.html">Home</a>
                 </li>
                 <li class="nav-link not-active">
@@ -38,14 +41,12 @@
                 <li class="nav-link not-active">
                     <a href="./sampleSubmission.html">Add a Gym</a>
                 </li>
-                <ul class="nav-buttons">
-                    <li class="nav-button">
-                        <a href="/signup.html">Sign Up</a>
-                    </li>
-                    <li class="nav-button">
-                        <a href="/login.html">Log In</a>
-                    </li>
-                </ul>
+
+                <!-- auth buttons -->
+                <li class="nav-buttons">
+                    <a class="nav-button" href="/signup.html">Sign up</a>
+                    <a class="nav-button" href="/login.html">Sign in</a>
+                </li>
             </ul>
         </div>
     </nav>

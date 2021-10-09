@@ -13,7 +13,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav role="navigation" aria-label="main navigation">
+    <nav aria-label="main navigation">
         <div class="nav-content">
             <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
 
@@ -52,26 +52,26 @@
     </nav>
     <main class="mountain-bg">
         <h1 class="page-title primary-transparent-bg container">Add New Gym</h1>
-        <!-- Form which will send a POST request to add a location (method empty for now) -->
-        <form class="submission-form" method="">
+        <!-- Form which will send a POST request to add a location (broken for now) -->
+        <form class="submission-form" method="post">
             <div class="form-input">
                 <label>Name of Gym</label>
-                <input class="block-input" type="text" name="gym-name" autocomplete="given-gym">
+                <input class="block-input" type="text" name="gym-name">
             </div>
 
             <div class="form-input gym-description">
                 <label>Description of Gym</label>
-                <textarea name="gym-description" wrap="physical"></textarea>
+                <textarea name="gym-description"></textarea>
             </div>
 
             <div class="form-input">
                 <label>Lattitude</label>
-                <input class="block-input" type="number" name="lattitude" autocomplete="">
+                <input class="block-input" type="number" name="lattitude">
             </div>
 
             <div class="form-input">
                 <label>Longitutde</label>
-                <input class="block-input" type="number" name="longitude" autocomplete="">
+                <input class="block-input" type="number" name="longitude">
             </div>
 
             <div class="file-uploads">

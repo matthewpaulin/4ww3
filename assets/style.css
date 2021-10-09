@@ -192,7 +192,7 @@ nav {
 
 .nav-button:active {
     transform: translate(-2px, 2px);
-    box-shadow: none
+    box-shadow: none;
 }
 
 #hamburger, #nav-check {
@@ -614,7 +614,7 @@ input[type="submit"]:hover {
 
 input[type="submit"]:active {
     transform: translate(-2px, 2px);
-    box-shadow: var(--main-bg-clr)
+    box-shadow: none;
 }
 
 .mb-05 {
