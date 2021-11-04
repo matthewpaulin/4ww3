@@ -1,4 +1,4 @@
-function initMap(){
+function initResultsMap(){
     //Map options
     var options = {
         zoom: 9,
@@ -8,21 +8,27 @@ function initMap(){
     var map = new google.maps.Map(document.getElementById("result-location"), options);
 
     //Array of gyms. This will eventually be stored on the server
-    var markers = [
-        { 
-          coords:{lat: 43.5116, lng: -79.8929 },
-          popUPcontent: '<h1>Impact Climbing</h1>'
+    var gyms = [
+        { coords:{lat: 43.5116, lng: -79.8929 },
+          popUPcontent: 
+          '<h1 id="gym-name"><a href="./individual_sample.html">Impact Climbing</a></h1>' +
+          '<span><i class="fas fa-star"></i></span>' +
+          '<span><i class="fas fa-star"></i></span>' +
+          '<span><i class="fas fa-star-half"></i></span>'
         },
         { 
           coords:{lat: 43.7454, lng: -79.4744 },
           popUPcontent: 
-            '<h1 id=popup>True North Climbing</h1>' +
-            '<h1 >3 Stars</h1>'
+          '<h1id="gym-name" class="nav-link not-active">True North Climbing</h1>' +
+          '<span><i class="fas fa-star"></i></span>' +
+          '<span><i class="fas fa-star"></i></span>' +
+          '<span><i class="fas fa-star"></i></span>'+
+          '<span><i class="fas fa-star-half"></i></span>'
         }
       ]
 
     //Loop through gyms adding markers to the map
-    markers.forEach(entry => {
+    gyms.forEach(entry => {
         addMarker(entry);
       });
 
