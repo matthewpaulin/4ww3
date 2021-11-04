@@ -505,7 +505,7 @@ select:focus {
     text-align: center;
     align-self: center;
     height: 400px;
-    width: 100%px;
+    width: 100%;
     margin-bottom: 2rem;
 }
 
@@ -522,6 +522,19 @@ select:focus {
 
 .object-rating, .object-image {
     text-align: center;
+}
+
+.map-container {
+    max-width: 469px;
+    min-width: 280px;
+    margin: 0 auto;
+}
+#gym-location{
+    text-align: center;
+    align-self: center;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 2rem;
 }
 
 .rating-value {
