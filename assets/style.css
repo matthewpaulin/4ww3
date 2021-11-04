@@ -462,6 +462,8 @@ select:focus {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+
+
 /* semi-transparent blue container */
 
 .primary-transparent-bg {
@@ -499,11 +501,15 @@ select:focus {
     outline: white;
 }
 
-.result-location {
+#result-location {
+    text-align: center;
+    align-self: center;
+    height: 400px;
+    width: 100%px;
     margin-bottom: 2rem;
 }
 
-.result-location, .result-image {
+.result-image {
     text-align: center;
     align-self: center;
 }

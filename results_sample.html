@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="./index.js"></script>
     <title>Sample Result | Rock Review</title>
     <link rel="icon" type="image/png" href="assets/images/fav2.png" />
 </head>
@@ -52,10 +53,13 @@
     </nav>
     <main class="mountain-bg">
         <h1 class="page-title primary-transparent-bg container"> Results </h1>
+
         <!-- map with search results -->
-        <div class="result-location">
-            <img class="sample-map" src="/assets/images/sample_map.png" alt="sample map">
+        <div class="container">
+            <div id="result-location"></div>
         </div>
+        
+
         <!-- sample results with title, rating, img, and description -->
         <ul class="sample-results container">
             <li class="result-info">
@@ -140,6 +144,10 @@
             <i class="fab fa-github fa-2x"></i>
         </a>
     </footer>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9fhzvQN-dCsJmqIf7ShehJxlkHfDaQZ8&callback=initMap&libraries=&v=weekly"
+        async
+    ></script>
 </body>
 
 </html>
