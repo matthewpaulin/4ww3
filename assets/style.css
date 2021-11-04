@@ -526,7 +526,6 @@ select:focus {
 
 .map-container {
     max-width: 469px;
-    min-width: 280px;
     margin: 0 auto;
 }
 #gym-location{
