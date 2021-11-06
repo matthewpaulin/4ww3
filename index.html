@@ -1,92 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/style.css" />
+		<link rel="icon" type="image/png" href="assets/images/fav2.png" />
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"
+		></script>
+		<title>Rock Review</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style.css" />
-    <link rel="icon" type="image/png" href="assets/images/fav2.png" />
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <title>Rock Review</title>
-</head>
+	<body>
+		<!-- Navbar -->
+		<nav aria-label="main navigation">
+			<div class="nav-content">
+				<img
+					class="nav-logo"
+					src="/assets/images/logo-light.png"
+					alt="website logo"
+				/>
 
-<body>
-    <!-- Navbar -->
-    <nav aria-label="main navigation">
-        <div class="nav-content">
-            <img class="nav-logo" src="/assets/images/logo-light.png" alt="website logo">
+				<!-- Hamburger icon -->
+				<input type="checkbox" id="nav-check" />
+				<div id="hamburger">
+					<label for="nav-check">
+						<span></span>
+						<span></span>
+						<span></span>
+					</label>
+				</div>
 
-            <!-- Hamburger icon -->
-            <input type="checkbox" id="nav-check">
-            <div id="hamburger">
-                <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
+				<!-- navbar links -->
+				<ul class="nav-links">
+					<li class="nav-link active">
+						<a href="/">Home</a>
+					</li>
+					<li class="nav-link not-active">
+						<a href="./results_sample.html">Sample Result</a>
+					</li>
+					<li class="nav-link not-active">
+						<a href="/individual_sample.html">Sample Gym</a>
+					</li>
+					<li class="nav-link not-active">
+						<a href="./submission.html">Add a Gym</a>
+					</li>
 
-            <!-- navbar links -->
-            <ul class="nav-links">
-                <li class="nav-link active">
-                    <a href="/">Home</a>
-                </li>
-                <li class="nav-link not-active">
-                    <a href="./results_sample.html">Sample Result</a>
-                </li>
-                <li class="nav-link not-active">
-                    <a href="/individual_sample.html">Sample Gym</a>
-                </li>
-                <li class="nav-link not-active">
-                    <a href="./submission.html">Add a Gym</a>
-                </li>
+					<!-- auth buttons -->
+					<li class="nav-buttons">
+						<a class="nav-button" href="/registration.html">Sign up</a>
+						<a class="nav-button" href="/login.html">Sign in</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<main class="mountain-bg">
+			<!-- Intro blurb -->
+			<p class="welcome container">
+				Welcome to Rock Review where our goal is to provide an easy way to pick
+				your next climbing destination. Search by location or by ratings and we
+				will provide climbing gyms that match your criteria.
+			</p>
 
-                <!-- auth buttons -->
-                <li class="nav-buttons">
-                    <a class="nav-button" href="/registration.html">Sign up</a>
-                    <a class="nav-button" href="/login.html">Sign in</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <main class="mountain-bg">
-        <!-- Intro blurb -->
-        <p class="welcome container">
-            Welcome to Rock Review where our goal is to provide an easy way to pick your next climbing destination.
-            Search
-            by location or by ratings and we will provide climbing gyms that match your criteria.
-        </p>
+			<!-- Search form -->
+			<form class="search" method="get" id="searchform">
+				<!-- Search bar and search icon -->
+				<div class="searchbar">
+					<input type="search" placeholder="Search" name="search" autofocus />
+					<button type="submit" value="submit" class="search-button">
+						<i class="search-icon fas fa-search fa-3x"></i>
+						<i class="search-icon fas fa-search fa-2x"></i>
+					</button>
+				</div>
+				<!-- Find gyms near me -->
+				<div class="gym-near-me" onclick="gymsNearMe()">Find gyms near me</div>
+				<!-- Rating filter -->
+				<div class="select-dropdown">
+					<select name="rating" form="searchform">
+						<option value="1 Star" id="one_star" class="select-dropdown-option">
+							1 Star
+						</option>
+						<option value="2 Star" id="two_star" class="select-dropdown-option">
+							2 Star
+						</option>
+						<option
+							value="3 Star"
+							id="three_star"
+							class="select-dropdown-option"
+						>
+							3 Star
+						</option>
+						<option
+							value="4 Star"
+							id="four_star"
+							class="select-dropdown-option"
+						>
+							4 Star
+						</option>
+						<option
+							value="5 Star"
+							id="five_star"
+							class="select-dropdown-option"
+						>
+							5 Star
+						</option>
+					</select>
+				</div>
+			</form>
+		</main>
 
-        <!-- Search form -->
-        <form class="search" method="get" id="searchform">
-            <!-- Search bar and search icon -->
-            <div class="searchbar">
-                <input type="search" placeholder="Search" name="search" autofocus>
-                <button type="submit" value="submit" class="search-button">
-                    <i class="search-icon fas fa-search fa-3x"></i>
-                    <i class="search-icon fas fa-search fa-2x"></i>
-                </button>
-            </div>
-            <!-- Rating filter -->
-            <div class="select-dropdown">
-                <select name="rating" form="searchform">
-                    <option value="1 Star" id="one_star" class="select-dropdown-option">1 Star</option>
-                    <option value="2 Star" id="two_star" class="select-dropdown-option">2 Star</option>
-                    <option value="3 Star" id="three_star" class="select-dropdown-option">3 Star</option>
-                    <option value="4 Star" id="four_star" class="select-dropdown-option">4 Star</option>
-                    <option value="5 Star" id="five_star" class="select-dropdown-option">5 Star</option>
-                </select>
-            </div>
-        </form>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <a href="https://github.com/matthewpaulin/4ww3" target="_blank">
-            <i class="fab fa-github fa-2x"></i>
-        </a>
-    </footer>
-</body>
-
+		<!-- Footer -->
+		<footer>
+			<a href="https://github.com/matthewpaulin/4ww3" target="_blank">
+				<i class="fab fa-github fa-2x"></i>
+			</a>
+		</footer>
+		<script src="index.js"></script>
+	</body>
 </html>
