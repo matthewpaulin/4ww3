@@ -590,6 +590,19 @@ select:focus {
 
 /* ___________ */
 
+/* required asterisk icon */
+
+svg#required-definition {
+    display: none;
+}
+
+.required-icon {
+    width: 0.5em;
+    height: 0.5em;
+    fill: #c0392b;
+    vertical-align: top;
+}
+
 .block-input:focus, textarea:focus, .date-input:focus {
     outline: solid 0.2em white;
     outline-offset: 0.1em;
@@ -645,6 +658,23 @@ input[type="submit"]:active {
     margin: auto;
     padding: 0.5rem 1rem;
     border-radius: 2rem;
+}
+
+.form-input.form-error>input {
+    background-color: rgba(192, 57, 43, .1);
+    border: solid 0.2rem #c0392b;
+}
+
+.form-checkbox.form-error {
+    border: solid 0.2rem #c0392b;
+}
+
+#errors {
+    background-color: white;
+    border: solid 2px #c0392b;
+    padding: .5em;
+    width: 100%;
+    color: #c0392b;
 }
 
 .gym-description {
