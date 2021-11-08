@@ -73,10 +73,13 @@ const validateEmail = (email) => {
 
 //Creating the map for the search results page
 function initResultsMap() {
+	const urlparams = new URLSearchParams(window.location.search);
+	const latitude = parseFloat(urlparams.get("lat")) || 43.5116;
+	const longitude = parseFloat(urlparams.get("lng")) || -79.8929;
 	//Map options
 	var options = {
 		zoom: 9,
-		center: { lat: 43.5116, lng: -79.8929 },
+		center: { lat: latitude, lng: longitude },
 	};
 	// Create Map
 	var map = new google.maps.Map(
@@ -97,13 +100,29 @@ function initResultsMap() {
 		{
 			coords: { lat: 43.7454, lng: -79.4744 },
 			popUPcontent:
-				'<h1id="gym-name" class="nav-link not-active">True North Climbing</h1>' +
+				'<h1 id="gym-name">True North Climbing</h1>' +
 				'<span><i class="fas fa-star"></i></span>' +
 				'<span><i class="fas fa-star"></i></span>' +
 				'<span><i class="fas fa-star"></i></span>' +
 				'<span><i class="fas fa-star-half"></i></span>',
 		},
 	];
+
+	//If the user want to search based on their location add a marker to show their location
+	if (urlparams.get("lat")) {
+		var marker = new google.maps.Marker({
+			position: { lat: latitude, lng: longitude },
+			map: map,
+			icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+		});
+		var infoPopup = new google.maps.InfoWindow({
+			content: '<h1 id="gym-name">Your Location</h1>',
+		});
+		infoPopup.open(map, marker);
+		marker.addListener("click", function () {
+			infoPopup.open(map, marker);
+		});
+	}
 
 	//Loop through gyms adding markers to the map
 	gyms.forEach((entry) => {
@@ -157,7 +176,7 @@ function initGymMap() {
 		{
 			coords: { lat: 43.7454, lng: -79.4744 },
 			popUPcontent:
-				'<h1id="gym-name" class="nav-link not-active">True North Climbing</h1>' +
+				'<h1 id="gym-name">True North Climbing</h1>' +
 				'<span><i class="fas fa-star"></i></span>' +
 				'<span><i class="fas fa-star"></i></span>' +
 				'<span><i class="fas fa-star"></i></span>' +
@@ -165,7 +184,7 @@ function initGymMap() {
 		},
 	];
 
-	//Loop through gyms adding markers to the map
+	//Only adding the marker for the gym in question
 	addMarker(gyms[0]);
 
 	//Add Marker Function
@@ -194,26 +213,30 @@ function initGymMap() {
 //Function to serach for gyms near the user
 function gymsNearMe() {
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(searchByLocation);
+		navigator.geolocation.getCurrentPosition(
+			(position) => {
+				window.location.href = `./results_sample.html?lat=${position.coords.latitude}&lng=${position.coords.longitude}`;
+			},
+			(err) => alert("Please grant this site location access")
+		);
 	} else {
+		console.error("geolocation api is unsupported");
 	}
-}
-function searchByLocation(position) {
-	//Will eventually redirect to the results page displaying the gyms nearest the users locaiton when the backend is implemented
-	console.log(position);
 }
 
 //Function to auto fill the Add new gym lattitude and longitude based on the users location
-var lat = document.getElementById("latitude");
-var long = document.getElementById("longitude");
 function useMyLocation() {
+	const lat = document.getElementById("latitude");
+	const long = document.getElementById("longitude");
 	if (navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(setLocation);
+		navigator.geolocation.getCurrentPosition(
+			(position) => {
+				lat.value = position.coords.latitude;
+				long.value = position.coords.longitude;
+			},
+			(err) => alert("Please grant this site location access")
+		);
 	} else {
+		console.error("geolocation api is unsupported");
 	}
-}
-function setLocation(position) {
-	console.log(position);
-	lat.value = position.coords.latitude;
-	long.value = position.coords.longitude;
 }

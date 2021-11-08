@@ -485,8 +485,20 @@ select:focus {
 }
 
 .gym-near-me {
+	width: 70%;
+	max-width: 250px;
+}
+.gym-near-me {
 	cursor: pointer;
-	color: blue;
+	padding: 0.5rem;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.7);
+	filter: drop-shadow(5px 5px 1px var(--main-bg-clr));
+	border-radius: 1rem;
+}
+.gym-near-me:hover {
+	background-color: #fafafa;
 }
 
 /* ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾ */
