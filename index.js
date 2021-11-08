@@ -108,7 +108,7 @@ function initResultsMap() {
 		},
 	];
 
-	//If the user want to search based on their location add a marker to show their location
+	//If the user want to search based on their location add a blue marker to show their location
 	if (urlparams.get("lat")) {
 		var marker = new google.maps.Marker({
 			position: { lat: latitude, lng: longitude },
