@@ -487,12 +487,14 @@ select:focus {
 .gym-near-me {
 	cursor: pointer;
 	padding: 0.5rem;
-	width: 70%;
+	width: 60%;
 	max-width: 250px;
+	height: 38px;
 	text-align: center;
+	font-size: 87%;
 	background-color: rgba(255, 255, 255, 0.7);
 	filter: drop-shadow(5px 5px 1px var(--main-bg-clr));
-	border-radius: 1rem;
+	border-radius: 2rem;
 }
 .gym-near-me:hover {
 	background-color: #fafafa;
