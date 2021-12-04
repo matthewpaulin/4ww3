@@ -33,27 +33,27 @@
             ?>
 			<div class="form-input">
 				<label>Name of Gym</label>
-				<input class="block-input" type="text" name="gym-name" />
+				<input class="block-input" type="text" name="gym-name" maxlength=256 aria-required="true"/>
 			</div>
 
 			<div class="form-input">
 				<label>Website (optional)</label>
-				<input class="block-input" type="text" name="website" />
+				<input class="block-input" type="text" name="website" maxlength=2048/>
 			</div>
 
 			<div class="form-input gym-description">
 				<label>Description of Gym</label>
-				<textarea name="gym-description"></textarea>
+				<textarea name="gym-description" aria-required="true" maxlength=2048></textarea>
 			</div>
 
 			<div class="form-input">
 				<label>Latitude</label>
-				<input id="latitude" class="block-input" type="number" name="latitude" value="" step=".00000001" />
+				<input id="latitude" class="block-input" type="number" name="latitude" value="" step=".00000001" aria-required="true"/>
 			</div>
 
 			<div class="form-input">
 				<label>Longitude</label>
-				<input id="longitude" class="block-input" type="number" name="longitude" value="" step=".00000001" />
+				<input id="longitude" class="block-input" type="number" name="longitude" value="" step=".00000001" aria-required="true"/>
 				<label id="current-location" onclick="useMyLocation()">Use my current location</label>
 			</div>
 			<h2>Upload Image</h2>
@@ -62,7 +62,7 @@
 				<label for="image-upload" class="content-upload-label">
 					<i class="fas fa-file-image fa-4x"></i>
 				</label>
-				<input id="image-upload" type="file" name="image" onchange="setFileName()" />
+				<input id="image-upload" type="file" name="image" onchange="setFileName()" aria-required="true"/>
 			</div>
 			<input type="submit" name="add_gym" value="Add Gym" />
 		</form>
