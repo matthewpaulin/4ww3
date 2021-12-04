@@ -98,7 +98,7 @@
 
             <div class="form-checkbox">
                 <input type="checkbox" name="consent" aria-required="true" oninput="removeErrorState(this)">
-                I agree to the <a class="form-link" href="/terms.html">terms and conditions</a> <svg
+                I agree to the <a class="form-link" href="/terms.php">terms and conditions</a> <svg
                     class="required-icon" focusable="false">
                     <use xlink:href="#required"></use>
                 </svg>
