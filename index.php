@@ -12,7 +12,7 @@
     </p>
 
     <!-- Search form -->
-    <form class="search" method="get" id="searchform">
+    <form class="search" action="results.php" method="get" id="searchform">
         <!-- Search bar and search icon -->
         <div class="searchbar">
             <input type="search" placeholder="Search" name="search" autofocus />
@@ -30,28 +30,31 @@
         <!-- Rating filter -->
         <div class="select-dropdown">
             <select name="rating" form="searchform">
-                <option value="1 Star" id="one_star" class="select-dropdown-option">
+                <option value="" selected disabled hidden class="select-dropdown-option">
+                    Rating
+                </option>
+                <option value="1" id="one_star" class="select-dropdown-option">
                     1 Star
                 </option>
-                <option value="2 Star" id="two_star" class="select-dropdown-option">
+                <option value="2" id="two_star" class="select-dropdown-option">
                     2 Star
                 </option>
                 <option
-                    value="3 Star"
+                    value="3"
                     id="three_star"
                     class="select-dropdown-option"
                 >
                     3 Star
                 </option>
                 <option
-                    value="4 Star"
+                    value="4"
                     id="four_star"
                     class="select-dropdown-option"
                 >
                     4 Star
                 </option>
                 <option
-                    value="5 Star"
+                    value="5"
                     id="five_star"
                     class="select-dropdown-option"
                 >

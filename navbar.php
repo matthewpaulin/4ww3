@@ -23,9 +23,9 @@
 			// Define each name associated with an URL
 			$urls = array(
 				'Home' => '/',
-				'Sample Results' => '/results_sample.html',
-				'Sample Gym' => '/individual_sample.html',
-				'Add a Gym' => '/submission.html',
+				'Sample Results' => '/results_sample.php',
+				'Sample Gym' => '/individual_sample.php',
+				'Add Gym' => '/submission.php',
 			);
 
 			foreach ($urls as $name => $url) {
